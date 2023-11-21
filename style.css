@@ -1,0 +1,129 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(40, 90, 107);
+}
+
+nav {
+    display: flex;
+    padding: 5px 5%;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(39, 39, 39);
+}
+
+li, a, button, i {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.logo img {
+    width: 70px;
+    height: auto;
+}
+
+.nav-list {
+    list-style: none;
+}
+
+.nav-list li {
+    position: relative;
+    display: inline-block;
+    padding: 0px 30px;
+}
+
+.nav-list li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav-list li:hover ul {
+    display: block;
+}
+
+.nav-list li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgb(39, 39, 39);
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+}
+
+.nav-list li ul li {
+    display: block;
+    padding: 8px 0;
+}
+
+.nav-list li a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+button {
+    padding: 10px 25px;
+    background-color: rgb(40, 90, 107);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(40, 90, 107, 0.5);
+}
+
+nav i {
+    cursor: pointer;
+    position: relative;
+    left: 30%;
+    transition: all 0.3s ease 0s;
+}
+
+nav i:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgb(39, 39, 39);
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    animation: fadeInDown 0.5s ease-in-out;
+    min-width: 100%;
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-list li:hover .sub-menu {
+    display: block;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.sub-menu a {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
