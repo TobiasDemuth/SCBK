@@ -26,8 +26,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(32, 32, 32);;
-    padding: 5px 5%; 
+    background-color: rgba(32, 32, 32, 0.9);
+    padding: 5px 7%; 
     text-shadow: 2px 2px rgb(0, 0, 0);
     border-bottom: 3px solid rgb(0, 156, 196);
 }
@@ -62,21 +62,40 @@ header {
     color: rgb(0, 156, 196);
 }
 
-a button {
+button {
     padding: 10px 25px;
     background-color: rgb(0, 156, 196);
     border: none;
     border-radius: 50px;
     transition: all 0.3s ease 0s;
-    box-shadow: 3px 3px #11222a;
+    box-shadow: 2px 2px #000000;
     text-decoration: none;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
 }
 
-a button:hover {
+button:hover {
     background-color: rgba(0, 156, 196, 0.5);
+}
+
+#menu {
+    color: #fff;
+    font-size: 20px;
+    transition: all .50s ease;
+    z-index: 10001;
+    right: 2%;
+    position: absolute;
+    display: none;
+    cursor: pointer;
+}
+
+#menu.hover-effect {
+    color: rgb(0, 156, 196);
+}
+
+#menu.hover-effect:hover {
+    color: rgb(0, 156, 196);
 }
 
 section {
@@ -103,22 +122,34 @@ h1{
 }
 
 @media (max-width: 1090px){
+    #menu {
+        display: block;
+    }
+
     .navbar{
         position: absolute;
-        top: 100%;
-        right: 2%;
+        top: 104%;
+        right: -100%;
         width: 250px;
-        height: 27vh;
+        height: 26vh;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         transition: all .50s ease;
-        background-color: #334147;
+        background-color: rgba(32, 32, 32, 0.8);
+        border-bottom: 3px solid rgb(0, 156, 196);
     }
     .navbar a{
         display: block;
         margin: 12px 0;
         padding: 0px 25px;
-        transition: all .50s ease;
+    }
+
+    .navbar a:hover{
+        transform: translateY(-3px);
+    }
+
+    .navbar.open {
+        right: 2%;
     }
 }
