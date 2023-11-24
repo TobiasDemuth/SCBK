@@ -9,6 +9,7 @@
 body {
     min-height: 100vh;
     background: #36474f;
+    text-align: center;
 }
 
 header {
@@ -22,6 +23,7 @@ header {
     justify-content: space-between;
     background-color: #334147;
     padding: 5px 5%;
+    text-shadow: 2px 2px #11222a;
 }
 
 .logo img{
@@ -56,6 +58,7 @@ button {
     border: none;
     border-radius: 50px;
     transition: all 0.3s ease 0s;
+    box-shadow: 3px 3px #11222a;
 }
 
 button:hover {
@@ -66,6 +69,19 @@ button a {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
+}
+
+section {
+    position: relative;
+    color: #fff;
+    top: 100px;
+}
+
+h1{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 40px;
+    text-shadow: 4px 4px #11222a;
 }
 
 @media (max-width: 1280px){
