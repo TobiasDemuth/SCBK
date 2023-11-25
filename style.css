@@ -130,7 +130,6 @@ h1{
 .chessboard {
     display: grid;
     grid-template-columns: repeat(8, 75px);
-    grid-gap: 0.7px;
 }
 
 .square {
