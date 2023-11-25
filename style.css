@@ -123,7 +123,6 @@ h1{
 .chessboard {
     display: grid;
     grid-template-columns: repeat(8, 50px);
-    grid-gap: 0.7px;
 }
 
 .square {
