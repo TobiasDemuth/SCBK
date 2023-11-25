@@ -1,0 +1,189 @@
+/* Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+}
+
+/* CSS Variables */
+:root {
+    --color-text: rgb(255, 255, 255);
+    --color-hover: rgb(0, 156, 196);
+    --color-button-hover: rgba(0, 156, 196, 0.5);
+    --color-header: rgba(32, 32, 32, 0.9);
+    --color-box-text-shadow: rgba(0, 156, 196, 0.4);
+    --font-weight-medium: 500;
+}
+
+/* Body Styling */
+body {
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: rgb(32, 32, 32);
+}
+
+/* Background Image */
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-header);
+    padding: 0px 7%;
+    text-shadow: 2px 2px var(--color-box-text-shadow);
+    border-bottom: 3px solid var(--color-hover);
+}
+
+/* Logo Styling */
+.logo img {
+    display: flex;
+    align-items: center;
+    width: 70px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Navigation Styling */
+.navbar a.active {
+    color: var(--color-hover);
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+}
+
+.navbar a {
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: var(--font-weight-medium);
+    padding: 15px;
+    margin: 0px 30px;
+    transition: all 0.50s ease;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: var(--color-hover);
+}
+
+/* Navigation Login Button Styling */
+.nav-login {
+    padding: 10px 15px;
+    background-color: var(--color-hover);
+    border: none;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    box-shadow: 2px 2px var(--color-box-text-shadow);
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: var(--font-weight-medium);
+}
+
+.nav-login:hover {
+    background-color: var(--color-button-hover);
+}
+
+/* Mobile Menu Icon Styling */
+#menu {
+    color: var(--color-text);
+    font-size: 20px;
+    transition: all 0.50s ease;
+    z-index: 10001;
+    right: 2%;
+    position: absolute;
+    display: none;
+    cursor: pointer;
+}
+
+#menu:hover {
+    color: var(--color-hover);
+}
+
+#menu.hover-effect,
+#menu.hover-effect:hover {
+    color: var(--color-hover);
+}
+
+/* Section Styling */
+section {
+    position: relative;
+    color: var(--color-text);
+    top: 100px;
+}
+
+h1{
+  padding-top: 10px;
+  padding-bottom: 30px;
+  font-size: 40px;
+  text-shadow: 4px 4px var(--color-box-text-shadow);
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+    header {
+        transition: 0.2s;
+    }
+
+    .navbar a {
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 1090px) {
+    #menu {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 104%;
+        right: -100%;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: all 0.50s ease;
+        background-color: var(--color-header);
+        border-bottom: 3px solid var(--color-hover);
+    }
+
+    .navbar a {
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+    }
+
+    .navbar a:hover {
+        transform: translateY(-3px);
+    }
+
+    .navbar.open {
+        right: 2%;
+    }
+
+}

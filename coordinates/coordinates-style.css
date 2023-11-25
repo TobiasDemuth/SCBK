@@ -1,0 +1,73 @@
+body{
+    align-items: center;
+}
+
+#gamecontainer{
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 75px);
+    grid-gap: 0.7px;
+}
+
+.square {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.even {
+    background-color: #bebebe;
+}
+
+.odd {
+    background-color: #000000;
+}
+
+#game-info {
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+#target-square {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+#start-button {
+    padding: 10px 50px;
+    border-radius: 50px;
+    background-color: var(--color-hover);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    color: var(--color-text);
+    font-size: 18px;
+    transition: all 0.50s ease;
+    box-shadow: 2px 2px var(--color-box-text-shadow);
+    margin-top: 10px;
+    border: none;
+}
+
+#start-button:hover {
+    background-color: var(--color-button-hover);
+}
+
+#notification {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-hover);
+    font-size: 75px;
+    display: none;
+}
