@@ -1,11 +1,9 @@
-// Define the chessboard
 const chessboard = document.getElementById('chessboard');
 const scoreElement = document.getElementById('score');
 const timeElement = document.getElementById('time');
 const bonusElement = document.getElementById('bonus');
 const notificationElement = document.getElementById('notification');
 
-// Create the chessboard squares
 for (let row = 0; row < 8; row++) {
     for (let col = 0; col < 8; col++) {
         const square = document.createElement('div');
@@ -41,7 +39,7 @@ function updateTargetSquare() {
 }
 
 function showTargetSquareNotification() {
-    const notificationDuration = 750; // milliseconds
+    const notificationDuration = 750;
     const notation = `${String.fromCharCode(65 + parseInt(targetSquare.dataset.col))}${8 - parseInt(targetSquare.dataset.row)}`;
 
     notificationElement.textContent = notation;
@@ -78,7 +76,7 @@ function showNotification(message) {
 
 function startGame() {
     resetGame();
-    updateTargetSquare();  // Add this line to highlight the first square
+    updateTargetSquare();
     startTimer();
     gameActive = true;
     enableClicks();
@@ -106,7 +104,7 @@ function disableClicks() {
 function calculateBonusPoints() {
     const currentTime = Date.now();
     const timeDifference = currentTime - lastClickTime;
-    const maxBonusTime = 30000; // Maximum time (in milliseconds) to receive bonus points
+    const maxBonusTime = 30000;
     const bonusPercentage = 100 - (timeDifference / maxBonusTime) * 100;
 
     return bonusPercentage > 0 ? Math.ceil(bonusPercentage) : 0;
@@ -122,4 +120,18 @@ function squareClick(event) {
         updateTargetSquare();
         updateGameInfo();
     }
+}
+
+function showTargetSquareNotification() {
+    const notificationDuration = 750;
+    const notation = `${String.fromCharCode(65 + parseInt(targetSquare.dataset.col))}${8 - parseInt(targetSquare.dataset.row)}`;
+
+    document.getElementById('target-notation').textContent = notation;
+
+    notificationElement.textContent = notation;
+    notificationElement.style.display = 'block';
+
+    setTimeout(() => {
+        notificationElement.style.display = 'none';
+    }, notificationDuration);
 }

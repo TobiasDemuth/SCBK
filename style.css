@@ -120,15 +120,23 @@ h1{
     text-shadow: 4px 4px #11222a;
 }
 
+#gamecontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
 .chessboard {
     display: grid;
-    grid-template-columns: repeat(8, 50px);
+    grid-template-columns: repeat(8, 75px);
+    grid-gap: 0.7px;
 }
 
 .square {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
     border: 1px solid #000;
     display: flex;
     justify-content: center;
@@ -147,6 +155,11 @@ h1{
 
 #game-info {
     margin-top: 30px;
+    font-size: 18px;
+}
+
+#target-square {
+    margin-top: 10px;
     font-size: 18px;
 }
 
