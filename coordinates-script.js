@@ -64,7 +64,7 @@ function startTimer() {
 
         if (timeRemaining === 0) {
             clearInterval(timer);
-            showNotification(`Game Over! Your final score is ${score}`);
+            showNotification(`final score: ${score}`);
             gameActive = false;
             disableClicks();
         }
