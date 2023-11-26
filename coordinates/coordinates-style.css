@@ -11,6 +11,7 @@ body{
 .chessboard {
     display: grid;
     grid-template-columns: repeat(8, 75px);
+    grid-gap: 0.7px;
 }
 
 .square {
@@ -69,4 +70,5 @@ body{
     color: var(--color-hover);
     font-size: 75px;
     display: none;
+    text-shadow: 4px 4px var(--color-box-text-shadow);
 }
