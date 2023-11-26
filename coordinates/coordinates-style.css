@@ -14,20 +14,20 @@ body {
 
 .chessboard {
     display: grid;
-    grid-template-columns: repeat(8, 75px);
+    grid-template-columns: repeat(8, 12vw);
 }
 
 .square {
     position: relative;
-    width: 75px;
-    height: 75px;
+    width: 12vw;
+    height: 12vw;
     max-height: 75px;
     max-width: 75px;
     border: 1px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 2vw;
     cursor: pointer;
 }
 
@@ -51,8 +51,8 @@ body {
 }
 
 #start-button {
-    padding: 10px 50px;
-    border-radius: 20px;
+    padding: 2vh 5vw;
+    border-radius: 2.5vw;
     background-color: var(--color-hover);
     font-weight: var(--font-weight-medium);
     cursor: pointer;
@@ -88,15 +88,15 @@ body {
     
     .square {
         position: relative;
-        width: 75px;
-        height: 75px;
+        width: 12vw;
+        height: 12vw;
         max-height: 70px;
         max-width: 70px;
         border: 1px solid #000;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 20px;
+        font-size: 2vw;
         cursor: pointer;
     }
 }
