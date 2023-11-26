@@ -153,3 +153,4 @@ function startCountdown() {
             startGame();
         }
     }, 1000);
+}
