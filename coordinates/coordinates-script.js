@@ -135,3 +135,20 @@ function showTargetSquareNotification() {
         notificationElement.style.display = 'none';
     }, notificationDuration);
 }
+
+function startCountdown() {
+    let count = 3;
+    const notificationElement = document.getElementById('notification');
+
+    const countdownInterval = setInterval(() => {
+        notificationElement.textContent = `Starting in ${count} seconds...`;
+        notificationElement.style.display = 'block';
+        count--;
+
+        if (count < 0) {
+            clearInterval(countdownInterval);
+            notificationElement.style.display = 'none';
+            startGame();
+        }
+    }, 1000);
+}
