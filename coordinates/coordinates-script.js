@@ -136,8 +136,6 @@ function showTargetSquareNotification() {
     }, notificationDuration);
 }
 
-}
-
 function startCountdown() {
     let count = 3;
     const notificationElement = document.getElementById('notification');
