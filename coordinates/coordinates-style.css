@@ -52,7 +52,7 @@ body {
 
 #start-button {
     padding: 2vh 5vw;
-    border-radius: 2.5vw;
+    border-radius: 25px;
     background-color: var(--color-hover);
     font-weight: var(--font-weight-medium);
     cursor: pointer;
@@ -75,7 +75,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--color-hover);
-    font-size: 45px;
+    font-size: 60px;
     display: none;
     text-shadow: 2px 2px var(--color-box-text-shadow);
 }
