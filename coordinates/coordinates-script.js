@@ -17,11 +17,20 @@ for (let row = 0; row < 8; row++) {
 
 let targetSquare;
 let score = 0;
-let timeRemaining = 30;
+let timeRemaining = 3000;
 let bonusPoints = 0;
 let timer;
 let gameActive = false;
 let lastClickTime;
+
+function resetGame() {
+    clearInterval(timer);
+    score = 0;
+    bonusPoints = 0;
+    timeRemaining = 3000;
+    updateGameInfo();
+    notificationElement.style.display = 'none';
+}
 
 function getRandomSquare() {
     const squares = document.querySelectorAll('.square');
@@ -51,22 +60,26 @@ function showTargetSquareNotification() {
 }
 
 function updateGameInfo() {
+    const formattedTime = (timeRemaining / 100).toFixed(2);
+    
     scoreElement.textContent = score;
-    timeElement.textContent = timeRemaining;
+    timeElement.textContent = formattedTime;
 }
+
 
 function startTimer() {
     timer = setInterval(() => {
         timeRemaining -= 1;
         updateGameInfo();
 
-        if (timeRemaining === 0) {
+        if (timeRemaining <= 0) {
             clearInterval(timer);
-            showNotification(`final score: ${score}`);
-            gameActive = false;
             disableClicks();
+            timeRemaining = 0;
+            gameActive = false;
+            showNotification(`final score: ${score}`);
         }
-    }, 1000);
+    }, 10);
 }
 
 function showNotification(message) {
@@ -80,15 +93,6 @@ function startGame() {
     startTimer();
     gameActive = true;
     enableClicks();
-}
-
-function resetGame() {
-    clearInterval(timer);
-    score = 0;
-    bonusPoints = 0;
-    timeRemaining = 30;
-    updateGameInfo();
-    notificationElement.style.display = 'none';
 }
 
 function enableClicks() {
@@ -120,6 +124,31 @@ function squareClick(event) {
         updateTargetSquare();
         updateGameInfo();
     }
+
+    else {
+
+        updateGameInfo();
+        if (timeRemaining > 300) {
+            timeRemaining -= 300;
+        }
+
+        else {
+            timeRemaining -= timeRemaining-10;
+        }
+        
+        const notificationDuration = 750;
+        const notation = `wrong! ${String.fromCharCode(65 + parseInt(targetSquare.dataset.col))}${8 - parseInt(targetSquare.dataset.row)}`;
+
+        document.getElementById('target-notation').textContent = notation;
+
+        notificationElement.textContent = notation;
+        notificationElement.style.display = 'block';
+
+        setTimeout(() => {
+            notificationElement.style.display = 'none';
+        }, notificationDuration);
+        
+    }
 }
 
 function showTargetSquareNotification() {
@@ -141,7 +170,7 @@ function startCountdown() {
     const notificationElement = document.getElementById('notification');
 
     const countdownInterval = setInterval(() => {
-        notificationElement.textContent = `Starting in ${count} seconds...`;
+        notificationElement.textContent = count;
         notificationElement.style.display = 'block';
         count--;
 
