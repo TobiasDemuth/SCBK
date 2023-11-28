@@ -25,7 +25,6 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    margin: 0;
     background-color: rgb(32, 32, 32);
 }
 
@@ -40,7 +39,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: var(--color-header);
-    padding: 0px 7%;
+    padding: 0 2%;
     text-shadow: 2px 2px var(--color-box-text-shadow);
     border-bottom: 3px solid var(--color-hover);
 }
@@ -51,7 +50,6 @@ header {
     align-items: center;
     width: 70px;
     height: auto;
-    margin-right: 20px;
 }
 
 /* Navigation Styling */
@@ -140,7 +138,6 @@ h1{
     }
 
     .navbar a {
-        padding: 5px 0;
         margin: 0px 20px;
     }
 }
