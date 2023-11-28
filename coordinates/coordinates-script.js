@@ -166,7 +166,6 @@ function squareClick(event) {
 
         setTimeout(() => {
             notificationElement.style.display = 'none';
-            enableClicks()
         }, notificationDuration);
         
     }
@@ -182,7 +181,6 @@ function showTargetSquareNotification() {
 
     setTimeout(() => {
         notificationElement.style.display = 'none';
-        enableClicks()
     }, notificationDuration);
 }
 
