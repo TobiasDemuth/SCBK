@@ -137,9 +137,16 @@ function squareClick(event) {
 
         const timeBonus = calculateBonusPoints();
         bonusPoints = timeBonus;
-        score += 1 + timeBonus;
-        updateTargetSquare();
-        updateGameInfo();
+        score += 10 + timeBonus;
+
+        if (timeRemaining <= 50) {
+            notificationDuration = timeRemaining-10;
+        }
+        else {
+            updateTargetSquare();
+            updateGameInfo();
+        }
+
     }
 
     else {
@@ -166,6 +173,9 @@ function squareClick(event) {
 
         setTimeout(() => {
             notificationElement.style.display = 'none';
+            if (timeRemaining <= 0) {
+                showNotification(`final score: ${score}`);
+            }
         }, notificationDuration);
         
     }
