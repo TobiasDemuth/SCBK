@@ -1,15 +1,8 @@
 body {
     min-height: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
-}
-
-#game-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .chessboard {
@@ -74,7 +67,7 @@ body {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--color-hover);
+    color: var(--color-text);
     font-size: 60px;
     display: none;
     text-shadow: 2px 2px var(--color-box-text-shadow);

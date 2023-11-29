@@ -130,7 +130,7 @@ function calculateBonusPoints() {
 function squareClick(event) {
     const clickedSquare = event.target;
 
-    if (clickedSquare === targetSquare) {
+    if (clickedSquare == targetSquare) {
 
         document.getElementById('notification').removeAttribute("style");
         document.getElementById('target-notation').removeAttribute("style");
