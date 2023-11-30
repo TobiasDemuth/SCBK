@@ -1,13 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  let menu = document.querySelector('#menu');
-  let navbar = document.querySelector('.navbar');
-
-  menu.onclick = () => {
-      navbar.classList.toggle('open');
-      menu.classList.toggle('hover-effect', navbar.classList.contains('open'));
-  }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector('header');
     const menu = document.querySelector('#menu');
