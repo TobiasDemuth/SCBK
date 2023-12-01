@@ -34,7 +34,7 @@
 
             <div class="login__content">
                 <div class="login__box">
-                    <i class="ri-user-3-line login__icon"></i>
+                    <i class="ri-mail-line login__icon"></i>
 
                     <div class="login__box-input">
                         <input type="email" required class="login__input" id="login-email" placeholder=" ">
@@ -59,16 +59,41 @@
                     <label for="login-check" class="login__check-label">Remember me</label>
                 </div>
 
-                <a href="#" class="login__forgot">Forgot Password?</a>
+                <a href="reset-password.html" class="login__forgot">Forgot Password?</a>
             </div>
 
             <button type="submit" class="login__button">Login</button>
 
             <p class="login__register">
-                Don't have an account? <a href="#">Register</a>
+                Don't have an account? <a href="register.html">Register</a>
             </p>
         </form>
     </div>
+    <footer>
+        <div class="footer-content">
+            <div class="waves-container">
+                <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                    <defs>
+                        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                    </defs>
+                    <g class="parallax">
+                        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(120, 120, 120,0.7" />
+                        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(120, 120, 120,0.5)" />
+                        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(120, 120, 120,0.3)" />
+                        <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(120, 120, 120)" />
+                    </g>
+                </svg>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2023 SC Black Knights. All rights reserved.</p>
+                <p>Made by @Shrillshows and @Cyliox</p>
+            </div>
+            <div class="footer-links">
+                <a href="#" target="_blank"><i class="ri-reddit-fill"></i> Reddit</a>
+                <a href="#" target="_blank"><i class="ri-discord-fill"></i> Discord</a>
+            </div>
+        </div>
+    </footer>
     <script src="global-scripts/nav-script.js"></script>
     <script src="login/login-script.js"></script>
 </body>
