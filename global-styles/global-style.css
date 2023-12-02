@@ -131,13 +131,6 @@ h1{
   text-shadow: 4px 4px var(--color-box-text-shadow);
 }
 
-/* Container Styling */
-.container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
 /* Footer Styling */
 footer {
     color: var(--color-text);
@@ -150,7 +143,7 @@ footer {
 .footer-content {
     position: relative;
     background-color: rgb(120, 120, 120);
-    padding: 20px;
+    padding: 11px;
     text-align: center;
 }
 
