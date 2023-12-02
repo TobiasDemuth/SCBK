@@ -142,7 +142,7 @@ footer {
 
 .footer-content {
     position: relative;
-    background-color: rgb(120, 120, 120);
+    background-color: var(--color-header);
     padding: 11px;
     text-align: center;
 }
