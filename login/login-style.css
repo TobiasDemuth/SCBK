@@ -119,6 +119,7 @@ input,
 
 .login__forgot {
     color: var(--color-hover);
+    text-decoration: none;
 }
 
 .login__forgot:hover {
@@ -149,7 +150,7 @@ input,
 
 .login__register a {
     color: var(--color-hover);
-    font-weight: var(--font-medium);
+    text-decoration: none;
 }
 
 .login__register a:hover {
